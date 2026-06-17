@@ -1,38 +1,41 @@
 from netfree_unstrict_ssl import unstrict_ssl
 unstrict_ssl()
+
 import os
 import gradio as gr
 from dotenv import load_dotenv
 load_dotenv()
 
-from llama_index.core.query_engine import RetrieverQueryEngine
-from llama_index.core.response_synthesizers import get_response_synthesizer
+from workflow import RAGWorkflow
 from rag_core import get_pipeline
 
+# ======================
+# PIPELINE
+# ======================
 pipeline = get_pipeline()
-retriever = pipeline["retriever"]
-llm = pipeline["llm"]
 
-response_synthesizer = get_response_synthesizer(llm=llm)
-query_engine = RetrieverQueryEngine(
-    retriever=retriever,
-    
-    response_synthesizer=response_synthesizer,
-)
+# ======================
+# WORKFLOW (חד-פעמי)
+# ======================
+workflow = RAGWorkflow(pipeline)
 
 
-def chat(message, history):
-    nodes = retriever.retrieve(message)
-    print("NODES:", len(nodes))
+# ======================
+# CHAT FUNCTION
+# ======================
+async def chat(message, history):
+    try:
+        result = await workflow.run(query=message)
+        return str(result)
 
-    response = response_synthesizer.synthesize(
-        query=message,
-        nodes=nodes
-    )
-
-    return str(response)
+    except Exception as e:
+        print(f"ERROR: {e}")
+        return "שגיאה בעיבוד השאלה"
 
 
+# ======================
+# UI
+# ======================
 demo = gr.ChatInterface(
     fn=chat,
     title="📚 KIRO RAG Chat"

@@ -18,6 +18,7 @@ def get_pipeline():
     api_key=os.getenv("COHERE_API_KEY"),
     model="command-r-08-2024"
 )
+    print(type(llm))
 
     embed_model = CohereEmbedding(
         api_key=os.getenv("COHERE_API_KEY"),
