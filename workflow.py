@@ -10,6 +10,14 @@ from llama_index.core.workflow import (
     StopEvent,
     Event,
 )
+import json
+from pydantic import BaseModel
+from typing import List
+
+class AnswerSchema(BaseModel):
+    answer: str
+    confidence: float = 0.0
+    sources: List[str] = []
 
 # =========================
 # 📦 EVENTS
@@ -116,13 +124,28 @@ class RAGWorkflow(Workflow):
     # 5️⃣ GENERATE (RAG אמיתי)
     @step
     def generate(self, ctx: Context, ev: GenerateEvent) -> StopEvent:
-
+       
         context_text = "\n\n".join(
             [str(n) for n in ev.nodes]
         )
-
+        
         prompt = f"""
-    Answer the question using the context below:
+    You are a strict QA system.
+
+    Use ONLY the provided context.
+
+    Return ONLY valid JSON in this format:
+
+    {{
+    "answer": "...",
+    "confidence": 0-1,
+    "sources": ["..."]
+    }}
+
+    Rules:
+    - Answer using only the provided context.
+    - If the context does not contain enough information, return "Not found".
+    - Return a valid JSON object.
 
     Context:
     {context_text}
@@ -142,8 +165,33 @@ class RAGWorkflow(Workflow):
             ]
         )
 
+        raw = response.message.content
+        print("RAW RESPONSE:")
+        print(raw)  
+
+        try:
+            data = json.loads(raw)
+            validated = AnswerSchema(**data)
+            print("VALIDATED:")
+            print(validated)
+
+        except Exception:
+            validated = AnswerSchema(
+                answer=raw,
+                confidence=0.0,
+                sources=[]
+            )
+
         print("AFTER LLM CALL")
 
-        return StopEvent(
-            result=response.message.content
-        )
+        formatted_text = self.format_answer(validated)
+        return StopEvent(result=formatted_text)
+
+    def format_answer(self,answer: AnswerSchema) -> str:
+        if answer.answer == "Not found":
+            return "איני יכול לספק מידע על שאלה זאת."
+
+        confidence_percent = int(answer.confidence * 100)
+
+        return answer.answer
+        
