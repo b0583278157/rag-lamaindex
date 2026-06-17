@@ -1,51 +1,67 @@
-from typing import Union
+from typing import List, Union
+import json
+from pydantic import BaseModel
 
-from llama_index.core.base.llms.types import ChatMessage, MessageRole
-from gradio.mcp import prompt
 from llama_index.core.workflow import (
     Workflow,
     step,
-    Context,
     StartEvent,
     StopEvent,
     Event,
+    Context
 )
-import json
-from pydantic import BaseModel
-from typing import List
+
+from llama_index.core.base.llms.types import ChatMessage, MessageRole
+
+
+# =========================
+# Schema
+# =========================
 
 class AnswerSchema(BaseModel):
     answer: str
     confidence: float = 0.0
     sources: List[str] = []
 
+
 # =========================
-# 📦 EVENTS
+# Events
 # =========================
 
 class QueryEvent(Event):
     query: str
+    attempt: int = 0
 
 
-class RetrievedEvent(Event):
+class RetrieveEvent(Event):
     query: str
     nodes: list
+    attempt: int
 
 
 class ValidateEvent(Event):
     query: str
     nodes: list
     is_valid: bool
-    reason: str = ""
+    confidence: float
+    attempt: int
+
+
+class DecideEvent(Event):
+    query: str
+    nodes: list
+    confidence: float
+    attempt: int
 
 
 class GenerateEvent(Event):
     query: str
     nodes: list
+    attempt: int
 
 
 # =========================
-# 🚀 WORKFLOW
+# Workflow
 # =========================
 
 class RAGWorkflow(Workflow):
@@ -55,24 +71,32 @@ class RAGWorkflow(Workflow):
         self.retriever = pipeline["retriever"]
         self.llm = pipeline["llm"]
 
-    # 1️⃣ START
+    # -------------------------
+    # START
+    # -------------------------
     @step
-    def start(self, ctx: Context, ev: StartEvent) -> QueryEvent:
-        return QueryEvent(query=ev.query)
+    def start(self, ctx:Context, ev: StartEvent) -> QueryEvent:
+        return QueryEvent(query=ev.query, attempt=0)
 
-    # 2️⃣ RETRIEVE
+    # -------------------------
+    # RETRIEVE
+    # -------------Context------------
     @step
-    def retrieve(self, ctx: Context, ev: QueryEvent) -> RetrievedEvent:
+    def retrieve(self, ctx:Context, ev: QueryEvent) -> RetrieveEvent:
+
         nodes = self.retriever.retrieve(ev.query)
 
-        return RetrievedEvent(
+        return RetrieveEvent(
             query=ev.query,
-            nodes=nodes
+            nodes=nodes,
+            attempt=ev.attempt
         )
 
-    # 3️⃣ VALIDATE (Event-driven validation)
+    # -------------------------
+    # VALIDATE
+    # -------------------------
     @step
-    def validate(self, ctx: Context, ev: RetrievedEvent) -> ValidateEvent:
+    def validate(self, ctx:Context, ev: RetrieveEvent) -> ValidateEvent:
 
         nodes = ev.nodes
 
@@ -81,117 +105,93 @@ class RAGWorkflow(Workflow):
                 query=ev.query,
                 nodes=[],
                 is_valid=False,
-                reason="No retrieval results"
+                confidence=0.0,
+                attempt=ev.attempt
             )
 
-        if len(nodes) < 2:
-            return ValidateEvent(
-                query=ev.query,
-                nodes=nodes,
-                is_valid=False,
-                reason="Too few results"
-            )
+        confidence = min(len(nodes) / 5, 1.0)
 
         return ValidateEvent(
             query=ev.query,
             nodes=nodes,
-            is_valid=True
+            is_valid=confidence > 0.4,
+            confidence=confidence,
+            attempt=ev.attempt
         )
 
-    # 4️⃣ ROUTING (Event-driven branching)
+    # -------------------------
+    # DECISION ROUTING
+    # -------------------------
     @step
-    def route(
-        self,
-        ctx: Context,
-        ev: ValidateEvent
-    ) -> Union[RetrievedEvent, GenerateEvent]:
+    def decide(self, ctx:Context, ev: ValidateEvent) -> Union[RetrieveEvent, GenerateEvent]:
 
-        # ❌ לא תקין → retry retrieval
-        if not ev.is_valid:
-            nodes = self.retriever.retrieve(ev.query)
+        # אם אין מספיק מידע → retry (עד 2 פעמים)
+        if not ev.is_valid and ev.attempt < 2:
 
-            return RetrievedEvent(
+            new_nodes = self.retriever.retrieve(ev.query)
+
+            return RetrieveEvent(
                 query=ev.query,
-                nodes=nodes
+                nodes=new_nodes,
+                attempt=ev.attempt + 1
             )
 
-        # ✅ תקין → המשך ליצירה
         return GenerateEvent(
             query=ev.query,
-            nodes=ev.nodes
+            nodes=ev.nodes,
+            attempt=ev.attempt
         )
 
-    # 5️⃣ GENERATE (RAG אמיתי)
+    # -------------------------
+    # GENERATE (LLM)
+    # -------------------------
     @step
-    def generate(self, ctx: Context, ev: GenerateEvent) -> StopEvent:
-       
-        context_text = "\n\n".join(
-            [str(n) for n in ev.nodes]
-        )
-        
+    def generate(self, ctx:Context, ev: GenerateEvent) -> StopEvent:
+
+        context_text = "\n\n".join(str(n) for n in ev.nodes)
+
         prompt = f"""
-    You are a strict QA system.
+You are a strict QA system.
 
-    Use ONLY the provided context.
+Use ONLY the provided context.
 
-    Return ONLY valid JSON in this format:
+Return JSON:
+{{
+  "answer": "...",
+  "confidence": 0-1,
+  "sources": []
+}}
 
-    {{
-    "answer": "...",
-    "confidence": 0-1,
-    "sources": ["..."]
-    }}
+If not found → answer = "Not found"
 
-    Rules:
-    - Answer using only the provided context.
-    - If the context does not contain enough information, return "Not found".
-    - Return a valid JSON object.
+Context:
+{context_text}
 
-    Context:
-    {context_text}
+Question:
+{ev.query}
+"""
 
-    Question:
-    {ev.query}
-    """
-
-        print("BEFORE LLM CALL")
-
-        response = self.llm.chat(
-            [
-                ChatMessage(
-                    role=MessageRole.USER,
-                    content=prompt
-                )
-            ]
-        )
+        response = self.llm.chat([
+            ChatMessage(
+                role=MessageRole.USER,
+                content=prompt
+            )
+        ])
 
         raw = response.message.content
-        print("RAW RESPONSE:")
-        print(raw)  
 
         try:
             data = json.loads(raw)
-            validated = AnswerSchema(**data)
-            print("VALIDATED:")
-            print(validated)
-
+            result = AnswerSchema(**data)
         except Exception:
-            validated = AnswerSchema(
+            result = AnswerSchema(
                 answer=raw,
                 confidence=0.0,
                 sources=[]
             )
 
-        print("AFTER LLM CALL")
+        # אם לא נמצא → תשובה נקייה
+        if result.answer == "Not found":
+            return StopEvent(result="איני יכול לספק מידע על שאלה זאת.")
 
-        formatted_text = self.format_answer(validated)
-        return StopEvent(result=formatted_text)
-
-    def format_answer(self,answer: AnswerSchema) -> str:
-        if answer.answer == "Not found":
-            return "איני יכול לספק מידע על שאלה זאת."
-
-        confidence_percent = int(answer.confidence * 100)
-
-        return answer.answer
-        
+        return StopEvent(result=result.answer)
