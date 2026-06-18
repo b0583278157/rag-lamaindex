@@ -45,6 +45,7 @@ class ValidateEvent(Event):
     is_valid: bool
     confidence: float
     attempt: int
+    reason: str 
 
 
 class DecideEvent(Event):
@@ -96,27 +97,75 @@ class RAGWorkflow(Workflow):
     # VALIDATE
     # -------------------------
     @step
-    def validate(self, ctx:Context, ev: RetrieveEvent) -> ValidateEvent:
+    def validate(self, ctx: Context, ev: RetrieveEvent) -> ValidateEvent:
 
-        nodes = ev.nodes
+        nodes = [
+            n for n in ev.nodes
+            if n is not None and str(n).strip()
+        ]
 
+        # קלט ריק
+        if not ev.query or not ev.query.strip():
+            return ValidateEvent(
+                query=ev.query,
+                nodes=[],
+                is_valid=False,
+                confidence=0.0,
+                attempt=ev.attempt,
+                reason="empty query"
+            )
+
+        # אין תוצאות
         if not nodes:
             return ValidateEvent(
                 query=ev.query,
                 nodes=[],
                 is_valid=False,
                 confidence=0.0,
-                attempt=ev.attempt
+                attempt=ev.attempt,
+                reason="no results"
             )
 
-        confidence = min(len(nodes) / 5, 1.0)
+        # מעט מדי תוצאות
+        if len(nodes) < 2:
+            return ValidateEvent(
+                query=ev.query,
+                nodes=nodes,
+                is_valid=False,
+                confidence=0.2,
+                attempt=ev.attempt,
+                reason="too few results"
+            )
+
+    # חישוב confidence
+        avg_score = sum(
+            getattr(n, "score", 1.0)
+            for n in nodes
+        ) / len(nodes)
+
+        confidence = (
+            0.5 * min(len(nodes) / 5, 1.0)
+            + 0.5 * avg_score
+        )
+
+        # confidence נמוך
+        if confidence < 0.4:
+            return ValidateEvent(
+                query=ev.query,
+                nodes=nodes,
+                is_valid=False,
+                confidence=confidence,
+                attempt=ev.attempt,
+                reason="low confidence"
+            )
 
         return ValidateEvent(
             query=ev.query,
             nodes=nodes,
-            is_valid=confidence > 0.4,
+            is_valid=True,
             confidence=confidence,
-            attempt=ev.attempt
+            attempt=ev.attempt,
+            reason=""
         )
 
     # -------------------------
