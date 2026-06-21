@@ -1,13 +1,12 @@
 # Environment variables
 .env
+
+# Virtual environment
 .venv/
 
 # Python cache
 __pycache__/
 *.pyc
-
-# Virtual environment
-.venv/
 
 # IDE
 .vscode/
@@ -15,3 +14,30 @@ __pycache__/
 
 # Logs
 *.log
+
+# Generated data
+knowledge_data.json
+
+# Gradio cache
+.gradio/# Environment variables
+.env
+
+# Virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Generated data
+knowledge_data.json
+
+# Gradio cache
+.gradio/
