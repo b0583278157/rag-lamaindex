@@ -1,93 +1,124 @@
 # RAG LlamaIndex Agent
 
-## Overview
+## 📌 Overview
 
 This project implements a Retrieval-Augmented Generation (RAG) agent using LlamaIndex.  
-It processes user questions, determines the correct data source, retrieves relevant context, and generates an answer using an LLM.
+It processes user questions, routes them to the correct data source, retrieves relevant context, and generates grounded answers using an LLM.
 
-The system is designed as an event-driven workflow with clear separation between routing, retrieval, validation, and generation.
+The system is built as an event-driven workflow with clear separation between routing, retrieval, validation, and generation.
 
 ---
 
-## Key Capabilities
+## ⚙️ Key Capabilities
 
 - Intelligent query routing (structured / semantic / out-of-scope)
 - Retrieval from vector database (Pinecone)
-- Extraction and use of structured JSON knowledge
+- Structured JSON knowledge extraction
 - Confidence scoring for retrieved results
-- LLM-based answer generation grounded in context only
+- Context-grounded LLM generation
 
 ---
 
-## System Components
+## 🧠 System Components
 
-### Query Router
-Classifies each user question into one of three paths:
-- Structured data lookup
-- Semantic document search
+### 🔀 Query Router
+Classifies each question into:
+- Structured data queries
+- Semantic search
 - Out-of-scope rejection
 
-### Retrieval Layer
-Fetches relevant information from:
-- Pinecone vector store
-- Structured knowledge base (JSON)
+### 📥 Retrieval Layer
+Retrieves relevant context from:
+- Pinecone vector database
+- Structured JSON knowledge base
 
-### Validation Layer
+### ✅ Validation Layer
 - Filters irrelevant results
 - Computes confidence score
-- Ensures minimum context quality before generation
+- Ensures quality before generation
 
-### Generation Layer
-- Uses LLM to produce final answer
-- Answers are strictly based on retrieved context
+### 🧾 Generation Layer
+- Uses LLM to generate final answer
+- Strictly grounded in retrieved context
 
 ---
 
-## Setup Instructions
+## 🚀 Setup Instructions
 
-### Install dependencies
+### 1. Install dependencies
+
 ```bash
 uv sync
-Environment variables
+```
 
-Create a .env file:
+---
+
+### 2. Environment variables
+
+Create a `.env` file:
+
+```env
 COHERE_API_KEY=your_api_key
 PINECONE_API_KEY=your_api_key
+```
 
-Running the Project
+---
+
+### 3. Run the project
+
+```bash
 uv run app.py
+```
 
-After running, a local Gradio interface will be available (e.g. http://127.0.0.1:7860).
+After running, a local Gradio interface will be available:
 
-Project Structure
+```
+http://127.0.0.1:7860
+```
+
+---
+
+## 📁 Project Structure
+
+```
 app.py                 # Application entry point
-workflow.py           # Core RAG workflow (event-driven pipeline)
-router.py             # Query classification logic
-extractor.py          # Document structured data extraction
-structured_store.py   # JSON structured knowledge loader
-models/               # Data schemas (Pydantic models)
+workflow.py            # Core RAG workflow (event-driven pipeline)
+router.py              # Query classification logic
+extractor.py           # Structured data extraction
+structured_store.py    # JSON knowledge loader
+models/                # Pydantic schemas
+```
 
-Example Queries
-Information retrieval
-How do I install dependencies?
-What is Bun in this project?
-How does the system work?
-Structured data queries
-Show me all decisions
-List system rules
-Out-of-scope handling
-Questions outside project scope are rejected or redirected
+---
 
-Architecture Flow
+## 💬 Example Queries
 
-User Input
-→ Router (classification)
-→ Retrieval (vector / structured)
-→ Validation (filter + scoring)
-→ LLM Generation
-→ Final Answer
+### Information retrieval
+- How do I install dependencies?
+- What is Bun in this project?
+- How does the system work?
 
-## Workflow Diagram
+### Structured data queries
+- Show me all decisions
+- List system rules
+
+### Out-of-scope handling
+- External/general knowledge questions are rejected or ignored
+
+---
+
+## 🔁 Architecture Flow
+
+User Input  
+→ Router (classification)  
+→ Retrieval (vector / structured)  
+→ Validation (filter + scoring)  
+→ LLM Generation  
+→ Final Answer  
+
+---
+
+## 🔄 Workflow Diagram
 
 ```mermaid
 flowchart TD
@@ -100,13 +131,13 @@ C -->|structured| D[Structured Data]
 C -->|semantic| E[Vector DB Retrieval]
 C -->|out_of_scope| F[Return Refusal Message]
 
-D --> G[Generate (Structured Answer)]
+D --> G[Generate Structured Answer]
 E --> H[Validate Retrieved Nodes]
 
 H --> I{Valid + Confidence}
 
 I -->|low confidence| E
-I -->|retry limit reached| G
+I -->|retry limit| G
 I -->|high confidence| J[Decide Step]
 
 J --> K[Generate with LLM]
