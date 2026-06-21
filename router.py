@@ -1,21 +1,22 @@
-from llama_index.core.base.llms.types import ChatMessage, MessageRole
+from llama_index.core.llms import ChatMessage
 
-def route_query(llm, query: str) -> str:
-    response = llm.chat([
-        ChatMessage(
-            role=MessageRole.USER,
-            content=f"""
-Classify the query:
-Return only: structured or semantic
 
-Query: {query}
+def route_query(llm, query: str):
+    prompt = f"""
+You are a classifier.
+
+Decide the type of the question based ONLY on internal project documents.
+
+Return ONLY one word:
+- structured
+- semantic
+- out_of_scope
+
+Question: {query}
 """
-        )
+
+    response = llm.chat([
+        ChatMessage(role="user", content=prompt)
     ])
 
-    result = response.message.content.strip().lower()
-
-    if result not in ["structured", "semantic"]:
-        return "semantic"
-
-    return result
+    return response.message.content.strip().lower()

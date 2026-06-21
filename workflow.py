@@ -1,7 +1,5 @@
-import nt
 from typing import List, Union
 import json
-from networkx import nodes
 from pydantic import BaseModel
 
 from llama_index.core.workflow import (
@@ -13,7 +11,8 @@ from llama_index.core.workflow import (
     Context
 )
 
-from llama_index.core.base.llms.types import ChatMessage, MessageRole
+from llama_index.core.llms import ChatMessage, MessageRole
+
 from router import route_query
 from structured_store import load_structured_data
 
@@ -49,14 +48,7 @@ class ValidateEvent(Event):
     is_valid: bool
     confidence: float
     attempt: int
-    reason: str 
-
-
-class DecideEvent(Event):
-    query: str
-    nodes: list
-    confidence: float
-    attempt: int
+    reason: str
 
 
 class GenerateEvent(Event):
@@ -77,60 +69,48 @@ class RAGWorkflow(Workflow):
         self.llm = pipeline["llm"]
         self.structured_data = load_structured_data()
 
-    # -------------------------
     # START
-    # -------------------------
     @step
-    def start(self, ctx:Context, ev: StartEvent) -> QueryEvent:
+    def start(self, ctx: Context, ev: StartEvent) -> QueryEvent:
         return QueryEvent(query=ev.query, attempt=0)
 
-    # -------------------------
-    # RETRIEVE
-    # -------------Context------------
+    # ROUTE + RETRIEVE
     @step
-    def retrieve(self, ctx:Context, ev: QueryEvent) -> RetrieveEvent:
-        
+    def retrieve(self, ctx: Context, ev: QueryEvent)-> Union[RetrieveEvent, GenerateEvent, StopEvent]:
+
         route = route_query(self.llm, ev.query)
-        
+
+        if route == "out_of_scope":
+            return StopEvent(result="אין לי אפשרות לספק מידע זה.")
 
         if route == "structured":
+
+            nodes = (
+                self.structured_data.get("decisions", []) +
+                self.structured_data.get("rules", []) +
+                self.structured_data.get("warnings", [])
+            )
+
             return GenerateEvent(
                 query=ev.query,
-                nodes=self.structured_data,
+                nodes=nodes,
                 attempt=ev.attempt
             )
-        print("RETRIEVE QUERY:", ev.query)
+
         nodes = self.retriever.retrieve(ev.query)
-        print("NODES FOUND:", len(nodes))
+
         return RetrieveEvent(
             query=ev.query,
             nodes=nodes,
             attempt=ev.attempt
         )
 
-    # -------------------------
     # VALIDATE
-    # -------------------------
     @step
     def validate(self, ctx: Context, ev: RetrieveEvent) -> ValidateEvent:
 
-        nodes = [
-            n for n in ev.nodes
-            if n is not None and str(n).strip()
-        ]
+        nodes = [n for n in ev.nodes if n]
 
-        # קלט ריק
-        if not ev.query or not ev.query.strip():
-            return ValidateEvent(
-                query=ev.query,
-                nodes=[],
-                is_valid=False,
-                confidence=0.0,
-                attempt=ev.attempt,
-                reason="empty query"
-            )
-
-        # אין תוצאות
         if not nodes:
             return ValidateEvent(
                 query=ev.query,
@@ -141,62 +121,31 @@ class RAGWorkflow(Workflow):
                 reason="no results"
             )
 
-        # מעט מדי תוצאות
-        if len(nodes) < 2:
-            return ValidateEvent(
-                query=ev.query,
-                nodes=nodes,
-                is_valid=False,
-                confidence=0.2,
-                attempt=ev.attempt,
-                reason="too few results"
-            )
+        avg_score = sum(getattr(n, "score", 1.0) for n in nodes) / len(nodes)
 
-    # חישוב confidence
-        avg_score = sum(
-            getattr(n, "score", 1.0)
-            for n in nodes
-        ) / len(nodes)
-
-        confidence = (
-            0.5 * min(len(nodes) / 5, 1.0)
-            + 0.5 * avg_score
-        )
-
-        # confidence נמוך
-        if confidence < 0.4:
-            return ValidateEvent(
-                query=ev.query,
-                nodes=nodes,
-                is_valid=False,
-                confidence=confidence,
-                attempt=ev.attempt,
-                reason="low confidence"
-            )
+        confidence = min(avg_score, 1.0)
 
         return ValidateEvent(
             query=ev.query,
             nodes=nodes,
-            is_valid=True,
+            is_valid=confidence > 0.3,
             confidence=confidence,
             attempt=ev.attempt,
             reason="ok"
         )
 
-    # -------------------------
-    # DECISION ROUTING
-    # -------------------------
+    # DECIDE
     @step
-    def decide(self, ctx:Context, ev: ValidateEvent) -> Union[RetrieveEvent, GenerateEvent]:
+    def decide(
+        self,
+        ctx: Context,
+        ev: ValidateEvent
+    ) -> Union[RetrieveEvent, GenerateEvent]:
 
-        # אם אין מספיק מידע → retry (עד 2 פעמים)
         if not ev.is_valid and ev.attempt < 2:
-
-            new_nodes = self.retriever.retrieve(ev.query)
-
             return RetrieveEvent(
                 query=ev.query,
-                nodes=new_nodes,
+                nodes=self.retriever.retrieve(ev.query),
                 attempt=ev.attempt + 1
             )
 
@@ -206,27 +155,17 @@ class RAGWorkflow(Workflow):
             attempt=ev.attempt
         )
 
-    # -------------------------
-    # GENERATE (LLM)
-    # -------------------------
+    # GENERATE
     @step
     def generate(self, ctx: Context, ev: GenerateEvent) -> StopEvent:
 
         context_text = "\n\n".join(
-            n.get_content() if hasattr(n, "get_content") else str(n)
-            for n in ev.nodes
-        )
+                        n.get_content()[:300] if hasattr(n, "get_content") else str(n)[:300]
+                        for n in ev.nodes[:3]
+                    )
 
         prompt = f"""
-You are a strict QA system.
-
-Answer ONLY in Hebrew.
-Do NOT use English unless the term itself is a name.
-
-Rules:
-- Plain text only
-- Clear and concise
-- Based only on context
+ענה  בעברית בלבד.
 
 Context:
 {context_text}
@@ -244,23 +183,9 @@ Answer:
             )
         ])
 
-        raw = response.message.content
+        answer = response.message.content
 
-        try:
-            result = AnswerSchema(
-                    answer=raw,
-                    confidence=0.0,
-                    sources=[]
-)
-            result = AnswerSchema(**data)
-        except Exception:
-            result = AnswerSchema(
-                answer=raw,
-                confidence=0.0,
-                sources=[]
-            )
+        if "not found" in answer.lower():
+            return StopEvent(result="לא נמצא מידע.")
 
-        if result.answer == "Not found":
-            return StopEvent(result="איני יכול לספק מידע על שאלה זאת.")
-
-        return StopEvent(result=result.answer)
+        return StopEvent(result=answer)
