@@ -76,9 +76,9 @@ class RAGWorkflow(Workflow):
 
     # ROUTE + RETRIEVE
     @step
-    def retrieve(self, ctx: Context, ev: QueryEvent)-> Union[RetrieveEvent, GenerateEvent, StopEvent]:
+    async def retrieve(self, ctx: Context, ev: QueryEvent) -> Union[RetrieveEvent, GenerateEvent, StopEvent]:
 
-        route = route_query(self.llm, ev.query)
+        route = await route_query(self.llm, ev.query)
 
         if route == "out_of_scope":
             return StopEvent(result="אין לי אפשרות לספק מידע זה.")
@@ -97,7 +97,7 @@ class RAGWorkflow(Workflow):
                 attempt=ev.attempt
             )
 
-        nodes = self.retriever.retrieve(ev.query)
+        nodes = await self.retriever.aretrieve(ev.query)
 
         return RetrieveEvent(
             query=ev.query,
@@ -136,16 +136,17 @@ class RAGWorkflow(Workflow):
 
     # DECIDE
     @step
-    def decide(
+    async def decide(
         self,
         ctx: Context,
         ev: ValidateEvent
     ) -> Union[RetrieveEvent, GenerateEvent]:
 
         if not ev.is_valid and ev.attempt < 2:
+            nodes = await self.retriever.aretrieve(ev.query)
             return RetrieveEvent(
                 query=ev.query,
-                nodes=self.retriever.retrieve(ev.query),
+                nodes=nodes,
                 attempt=ev.attempt + 1
             )
 
@@ -157,15 +158,15 @@ class RAGWorkflow(Workflow):
 
     # GENERATE
     @step
-    def generate(self, ctx: Context, ev: GenerateEvent) -> StopEvent:
+    async def generate(self, ctx: Context, ev: GenerateEvent) -> StopEvent:
 
         context_text = "\n\n".join(
-                        n.get_content()[:300] if hasattr(n, "get_content") else str(n)[:300]
-                        for n in ev.nodes[:3]
-                    )
+            n.get_content()[:300] if hasattr(n, "get_content") else str(n)[:300]
+            for n in ev.nodes[:3]
+        )
 
         prompt = f"""
-ענה  בעברית בלבד.
+ענה בעברית בלבד.
 
 Context:
 {context_text}
@@ -176,7 +177,7 @@ Question:
 Answer:
 """
 
-        response = self.llm.chat([
+        response = await self.llm.achat([
             ChatMessage(
                 role=MessageRole.USER,
                 content=prompt
