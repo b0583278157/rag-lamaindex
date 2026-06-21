@@ -86,3 +86,32 @@ User Input
 → Validation (filter + scoring)
 → LLM Generation
 → Final Answer
+
+## Workflow Diagram
+
+```mermaid
+flowchart TD
+
+A[User Question] --> B[Router - classify query]
+
+B --> C{Query Type}
+
+C -->|structured| D[Structured Data Retrieval]
+C -->|semantic| E[Vector DB Retrieval]
+C -->|out_of_scope| F[Return: No information available]
+
+D --> G[Build Context from Structured Data]
+E --> H[Retrieve Top-K Documents]
+
+G --> I[Validate Results]
+H --> I
+
+I --> J{Confidence Check}
+
+J -->|low confidence| E
+J -->|high confidence| K[LLM Generation]
+
+K --> L[Combine Context + Question]
+L --> M[Generate Answer]
+
+M --> N[Final Response to User]
