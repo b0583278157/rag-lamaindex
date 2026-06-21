@@ -92,26 +92,24 @@ User Input
 ```mermaid
 flowchart TD
 
-A[User Question] --> B[Router - classify query]
+A[User Question] --> B[Router]
 
 B --> C{Query Type}
 
-C -->|structured| D[Structured Data Retrieval]
+C -->|structured| D[Structured Data]
 C -->|semantic| E[Vector DB Retrieval]
-C -->|out_of_scope| F[Return: No information available]
+C -->|out_of_scope| F[Return Refusal Message]
 
-D --> G[Build Context from Structured Data]
-E --> H[Retrieve Top-K Documents]
+D --> G[Generate (Structured Answer)]
+E --> H[Validate Retrieved Nodes]
 
-G --> I[Validate Results]
-H --> I
+H --> I{Valid + Confidence}
 
-I --> J{Confidence Check}
+I -->|low confidence| E
+I -->|retry limit reached| G
+I -->|high confidence| J[Decide Step]
 
-J -->|low confidence| E
-J -->|high confidence| K[LLM Generation]
+J --> K[Generate with LLM]
 
-K --> L[Combine Context + Question]
-L --> M[Generate Answer]
-
-M --> N[Final Response to User]
+G --> L[Final Answer]
+K --> L
