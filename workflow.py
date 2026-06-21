@@ -1,5 +1,7 @@
+import nt
 from typing import List, Union
 import json
+from networkx import nodes
 from pydantic import BaseModel
 
 from llama_index.core.workflow import (
@@ -12,6 +14,8 @@ from llama_index.core.workflow import (
 )
 
 from llama_index.core.base.llms.types import ChatMessage, MessageRole
+from router import route_query
+from structured_store import load_structured_data
 
 
 # =========================
@@ -71,6 +75,7 @@ class RAGWorkflow(Workflow):
         super().__init__()
         self.retriever = pipeline["retriever"]
         self.llm = pipeline["llm"]
+        self.structured_data = load_structured_data()
 
     # -------------------------
     # START
@@ -84,9 +89,19 @@ class RAGWorkflow(Workflow):
     # -------------Context------------
     @step
     def retrieve(self, ctx:Context, ev: QueryEvent) -> RetrieveEvent:
+        
+        route = route_query(self.llm, ev.query)
+        
 
+        if route == "structured":
+            return GenerateEvent(
+                query=ev.query,
+                nodes=self.structured_data,
+                attempt=ev.attempt
+            )
+        print("RETRIEVE QUERY:", ev.query)
         nodes = self.retriever.retrieve(ev.query)
-
+        print("NODES FOUND:", len(nodes))
         return RetrieveEvent(
             query=ev.query,
             nodes=nodes,
@@ -165,7 +180,7 @@ class RAGWorkflow(Workflow):
             is_valid=True,
             confidence=confidence,
             attempt=ev.attempt,
-            reason=""
+            reason="ok"
         )
 
     # -------------------------
@@ -195,29 +210,31 @@ class RAGWorkflow(Workflow):
     # GENERATE (LLM)
     # -------------------------
     @step
-    def generate(self, ctx:Context, ev: GenerateEvent) -> StopEvent:
+    def generate(self, ctx: Context, ev: GenerateEvent) -> StopEvent:
 
-        context_text = "\n\n".join(str(n) for n in ev.nodes)
+        context_text = "\n\n".join(
+            n.get_content() if hasattr(n, "get_content") else str(n)
+            for n in ev.nodes
+        )
 
         prompt = f"""
 You are a strict QA system.
 
-Use ONLY the provided context.
+Answer ONLY in Hebrew.
+Do NOT use English unless the term itself is a name.
 
-Return JSON:
-{{
-  "answer": "...",
-  "confidence": 0-1,
-  "sources": []
-}}
-
-If not found → answer = "Not found"
+Rules:
+- Plain text only
+- Clear and concise
+- Based only on context
 
 Context:
 {context_text}
 
 Question:
 {ev.query}
+
+Answer:
 """
 
         response = self.llm.chat([
@@ -230,7 +247,11 @@ Question:
         raw = response.message.content
 
         try:
-            data = json.loads(raw)
+            result = AnswerSchema(
+                    answer=raw,
+                    confidence=0.0,
+                    sources=[]
+)
             result = AnswerSchema(**data)
         except Exception:
             result = AnswerSchema(
@@ -239,7 +260,6 @@ Question:
                 sources=[]
             )
 
-        # אם לא נמצא → תשובה נקייה
         if result.answer == "Not found":
             return StopEvent(result="איני יכול לספק מידע על שאלה זאת.")
 

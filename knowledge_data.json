@@ -1,0 +1,3180 @@
+{
+  "decisions": [
+    {
+      "id": "AI-powered game development",
+      "title": "Spirit of Kiro",
+      "summary": "Infinite crafting workshop game demonstrating AI-powered game development.",
+      "source": {
+        "file": "product.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Frontend-Systems-Architecture",
+      "title": "Frontend Systems Architecture",
+      "summary": "The client uses a system-based architecture where independent systems communicate via events.",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Message-Driven-Communication",
+      "title": "Message-Driven Communication",
+      "summary": "Consistent naming patterns and organized server handlers for WebSocket messages.",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Infrastructure-as-Code",
+      "title": "Infrastructure as Code",
+      "summary": "Each service has its own `iac/` directory containing CloudFormation YAML templates, deployment scripts, and environment-specific configurations.",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Testing-Structure",
+      "title": "Testing Structure",
+      "summary": "Server tests are placed in `__tests__/` directories alongside source code, while client tests use Vitest with Vue Test Utils.",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "File-Naming-Conventions",
+      "title": "File Naming Conventions",
+      "summary": "Conventions for file names, component names, and message types: kebab-case; for JavaScript/TypeScript variables and functions: camelCase; for Vue components and TypeScript interfaces: PascalCase.",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Frontend-Systems-Architecture",
+      "title": "Frontend Systems Architecture",
+      "summary": "The client uses a system-based architecture where independent systems communicate via events.",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Message-Driven-Communication",
+      "title": "Message-Driven Communication",
+      "summary": "Consistent naming patterns and organized server handlers for WebSocket messages.",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Infrastructure-as-Code",
+      "title": "Infrastructure as Code",
+      "summary": "Each service has its own `iac/` directory containing CloudFormation YAML templates, deployment scripts, and environment-specific configurations.",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Testing-Structure",
+      "title": "Testing Structure",
+      "summary": "Server tests are placed in `__tests__/` directories alongside source code, while client tests use Vitest with Vue Test Utils.",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "File-Naming-Conventions",
+      "title": "File Naming Conventions",
+      "summary": "Conventions for file names, component names, and message types: kebab-case; for JavaScript/TypeScript variables and functions: camelCase; for Vue components and TypeScript interfaces: PascalCase.",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Frontend-Systems-Architecture",
+      "title": "Frontend Systems Architecture",
+      "summary": "The client uses a system-based architecture where independent systems communicate via events.",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Message-Driven-Communication",
+      "title": "Message-Driven Communication",
+      "summary": "Consistent naming patterns and organized server handlers for WebSocket messages.",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Infrastructure-as-Code",
+      "title": "Infrastructure as Code",
+      "summary": "Each service has its own `iac/` directory containing CloudFormation YAML templates, deployment scripts, and environment-specific configurations.",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Testing-Structure",
+      "title": "Testing Structure",
+      "summary": "Server tests are placed in `__tests__/` directories alongside source code, while client tests use Vitest with Vue Test Utils.",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "File-Naming-Conventions",
+      "title": "File Naming Conventions",
+      "summary": "Conventions for file names, component names, and message types: kebab-case; for JavaScript/TypeScript variables and functions: camelCase; for Vue components and TypeScript interfaces: PascalCase.",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Frontend-Systems-Architecture",
+      "title": "Frontend Systems Architecture",
+      "summary": "The client uses a system-based architecture where independent systems communicate via events.",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Message-Driven-Communication",
+      "title": "Message-Driven Communication",
+      "summary": "Consistent naming patterns and organized server handlers for WebSocket messages.",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Infrastructure-as-Code",
+      "title": "Infrastructure as Code",
+      "summary": "Each service has its own `iac/` directory containing CloudFormation YAML templates, deployment scripts, and environment-specific configurations.",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Testing-Structure",
+      "title": "Testing Structure",
+      "summary": "Server tests are placed in `__tests__/` directories alongside source code, while client tests use Vitest with Vue Test Utils.",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "File-Naming-Conventions",
+      "title": "File Naming Conventions",
+      "summary": "Conventions for file names, component names, and message types: kebab-case; for JavaScript/TypeScript variables and functions: camelCase; for Vue components and TypeScript interfaces: PascalCase.",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Frontend-Systems-Architecture",
+      "title": "Frontend Systems Architecture",
+      "summary": "The client uses a system-based architecture where independent systems communicate via events.",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Message-Driven-Communication",
+      "title": "Message-Driven Communication",
+      "summary": "Consistent naming patterns and organized server handlers for WebSocket messages.",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Infrastructure-as-Code",
+      "title": "Infrastructure as Code",
+      "summary": "Each service has its own `iac/` directory containing CloudFormation YAML templates, deployment scripts, and environment-specific configurations.",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Testing-Structure",
+      "title": "Testing Structure",
+      "summary": "Server tests are placed in `__tests__/` directories alongside source code, while client tests use Vitest with Vue Test Utils.",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "File-Naming-Conventions",
+      "title": "File Naming Conventions",
+      "summary": "Conventions for file names, component names, and message types: kebab-case; for JavaScript/TypeScript variables and functions: camelCase; for Vue components and TypeScript interfaces: PascalCase.",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Runtime & Build System Decision",
+      "title": "Bun, Docker/Podman, and TypeScript",
+      "summary": "Bun is chosen as the primary JavaScript runtime for both client and server development. Docker/Podman is used for containerized development with compose orchestration. TypeScript is implemented for type safety throughout the codebase.",
+      "source": {
+        "file": "tech.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Frontend Framework Decision",
+      "title": "Vue.js 3, Pinia, and Vite",
+      "summary": "Vue.js 3 is selected as the component-based UI framework, utilizing the Composition API. Pinia is chosen for state management of reactive game state. Vite is used as the build tool and development server.",
+      "source": {
+        "file": "tech.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Backend Framework Decision",
+      "title": "Bun WebSocket Server, AWS SDK, and Redis",
+      "summary": "Bun WebSocket Server is used for real-time bidirectional communication. AWS SDK is integrated for AWS service interaction. Redis is employed for caching and session management.",
+      "source": {
+        "file": "tech.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "AWS Services Decision",
+      "title": "Amazon Bedrock, DynamoDB, Cognito, S3, CloudFront, and MemoryDB",
+      "summary": "Amazon Bedrock is integrated for AI model support. DynamoDB is chosen for game state and inventory persistence. Amazon Cognito is used for user authentication and authorization. S3 and CloudFront are selected for asset storage and content delivery. MemoryDB is utilized as a vector database for image matching.",
+      "source": {
+        "file": "tech.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Development Commands Decision",
+      "title": "Root, Client, Server, and Infrastructure Setup Commands",
+      "summary": "Various development commands are outlined for different levels and purposes, including root-level commands for starting both client and server in development mode, client commands for development server start, production build, preview, unit tests, linting, and code formatting, server commands for starting the server with hot reload, running tests with JUnit output, and setting up local DynamoDB tables, and infrastructure setup commands for deploying Cognito resources, starting the containerized stack, and bootstrapping local DynamoDB.",
+      "source": {
+        "file": "tech.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Code Quality Decision",
+      "title": "ESLint, Prettier, TypeScript, and Vitest",
+      "summary": "ESLint is used for linting with Vue and TypeScript configurations. Prettier is employed for code formatting. TypeScript is enabled for strict type checking. Vitest is chosen for unit testing with coverage reporting.",
+      "source": {
+        "file": "tech.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Runtime & Build System Decision",
+      "title": "Bun, Docker/Podman, and TypeScript",
+      "summary": "Bun is chosen as the primary JavaScript runtime for both client and server development. Docker/Podman is used for containerized development with compose orchestration. TypeScript is implemented for type safety throughout the codebase.",
+      "source": {
+        "file": "tech.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Frontend Framework Decision",
+      "title": "Vue.js 3, Pinia, and Vite",
+      "summary": "Vue.js 3 is selected as the component-based UI framework, utilizing the Composition API. Pinia is chosen for state management of reactive game state. Vite is used as the build tool and development server.",
+      "source": {
+        "file": "tech.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Backend Framework Decision",
+      "title": "Bun WebSocket Server, AWS SDK, and Redis",
+      "summary": "Bun WebSocket Server is used for real-time bidirectional communication. AWS SDK is integrated for AWS service interaction. Redis is employed for caching and session management.",
+      "source": {
+        "file": "tech.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "AWS Services Decision",
+      "title": "Amazon Bedrock, DynamoDB, Cognito, S3, CloudFront, and MemoryDB",
+      "summary": "Amazon Bedrock is integrated for AI model support. DynamoDB is chosen for game state and inventory persistence. Amazon Cognito is used for user authentication and authorization. S3 and CloudFront are selected for asset storage and content delivery. MemoryDB is utilized as a vector database for image matching.",
+      "source": {
+        "file": "tech.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Development Commands Decision",
+      "title": "Root, Client, Server, and Infrastructure Setup Commands",
+      "summary": "Various development commands are outlined for different levels and purposes, including root-level commands for starting both client and server in development mode, client commands for development server start, production build, preview, unit tests, linting, and code formatting, server commands for starting the server with hot reload, running tests with JUnit output, and setting up local DynamoDB tables, and infrastructure setup commands for deploying Cognito resources, starting the containerized stack, and bootstrapping local DynamoDB.",
+      "source": {
+        "file": "tech.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Code Quality Decision",
+      "title": "ESLint, Prettier, TypeScript, and Vitest",
+      "summary": "ESLint is used for linting with Vue and TypeScript configurations. Prettier is employed for code formatting. TypeScript is enabled for strict type checking. Vitest is chosen for unit testing with coverage reporting.",
+      "source": {
+        "file": "tech.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Runtime & Build System Decision",
+      "title": "Bun, Docker/Podman, and TypeScript",
+      "summary": "Bun is chosen as the primary JavaScript runtime for both client and server development. Docker/Podman is used for containerized development with compose orchestration. TypeScript is implemented for type safety throughout the codebase.",
+      "source": {
+        "file": "tech.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Frontend Framework Decision",
+      "title": "Vue.js 3, Pinia, and Vite",
+      "summary": "Vue.js 3 is selected as the component-based UI framework, utilizing the Composition API. Pinia is chosen for state management of reactive game state. Vite is used as the build tool and development server.",
+      "source": {
+        "file": "tech.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Backend Framework Decision",
+      "title": "Bun WebSocket Server, AWS SDK, and Redis",
+      "summary": "Bun WebSocket Server is used for real-time bidirectional communication. AWS SDK is integrated for AWS service interaction. Redis is employed for caching and session management.",
+      "source": {
+        "file": "tech.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "AWS Services Decision",
+      "title": "Amazon Bedrock, DynamoDB, Cognito, S3, CloudFront, and MemoryDB",
+      "summary": "Amazon Bedrock is integrated for AI model support. DynamoDB is chosen for game state and inventory persistence. Amazon Cognito is used for user authentication and authorization. S3 and CloudFront are selected for asset storage and content delivery. MemoryDB is utilized as a vector database for image matching.",
+      "source": {
+        "file": "tech.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Development Commands Decision",
+      "title": "Root, Client, Server, and Infrastructure Setup Commands",
+      "summary": "Various development commands are outlined for different levels and purposes, including root-level commands for starting both client and server in development mode, client commands for development server start, production build, preview, unit tests, linting, and code formatting, server commands for starting the server with hot reload, running tests with JUnit output, and setting up local DynamoDB tables, and infrastructure setup commands for deploying Cognito resources, starting the containerized stack, and bootstrapping local DynamoDB.",
+      "source": {
+        "file": "tech.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Code Quality Decision",
+      "title": "ESLint, Prettier, TypeScript, and Vitest",
+      "summary": "ESLint is used for linting with Vue and TypeScript configurations. Prettier is employed for code formatting. TypeScript is enabled for strict type checking. Vitest is chosen for unit testing with coverage reporting.",
+      "source": {
+        "file": "tech.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Runtime & Build System Decision",
+      "title": "Bun, Docker/Podman, and TypeScript",
+      "summary": "Bun is chosen as the primary JavaScript runtime for both client and server development. Docker/Podman is used for containerized development with compose orchestration. TypeScript is implemented for type safety throughout the codebase.",
+      "source": {
+        "file": "tech.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Frontend Framework Decision",
+      "title": "Vue.js 3, Pinia, and Vite",
+      "summary": "Vue.js 3 is selected as the component-based UI framework, utilizing the Composition API. Pinia is chosen for state management of reactive game state. Vite is used as the build tool and development server.",
+      "source": {
+        "file": "tech.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Backend Framework Decision",
+      "title": "Bun WebSocket Server, AWS SDK, and Redis",
+      "summary": "Bun WebSocket Server is used for real-time bidirectional communication. AWS SDK is integrated for AWS service interaction. Redis is employed for caching and session management.",
+      "source": {
+        "file": "tech.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "AWS Services Decision",
+      "title": "Amazon Bedrock, DynamoDB, Cognito, S3, CloudFront, and MemoryDB",
+      "summary": "Amazon Bedrock is integrated for AI model support. DynamoDB is chosen for game state and inventory persistence. Amazon Cognito is used for user authentication and authorization. S3 and CloudFront are selected for asset storage and content delivery. MemoryDB is utilized as a vector database for image matching.",
+      "source": {
+        "file": "tech.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Development Commands Decision",
+      "title": "Root, Client, Server, and Infrastructure Setup Commands",
+      "summary": "Various development commands are outlined for different levels and purposes, including root-level commands for starting both client and server in development mode, client commands for development server start, production build, preview, unit tests, linting, and code formatting, server commands for starting the server with hot reload, running tests with JUnit output, and setting up local DynamoDB tables, and infrastructure setup commands for deploying Cognito resources, starting the containerized stack, and bootstrapping local DynamoDB.",
+      "source": {
+        "file": "tech.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Code Quality Decision",
+      "title": "ESLint, Prettier, TypeScript, and Vitest",
+      "summary": "ESLint is used for linting with Vue and TypeScript configurations. Prettier is employed for code formatting. TypeScript is enabled for strict type checking. Vitest is chosen for unit testing with coverage reporting.",
+      "source": {
+        "file": "tech.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Runtime & Build System Decision",
+      "title": "Bun, Docker/Podman, and TypeScript",
+      "summary": "Bun is chosen as the primary JavaScript runtime for both client and server development. Docker/Podman is used for containerized development with compose orchestration. TypeScript is implemented for type safety throughout the codebase.",
+      "source": {
+        "file": "tech.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Frontend Framework Decision",
+      "title": "Vue.js 3, Pinia, and Vite",
+      "summary": "Vue.js 3 is selected as the component-based UI framework, utilizing the Composition API. Pinia is chosen for state management of reactive game state. Vite is used as the build tool and development server.",
+      "source": {
+        "file": "tech.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Backend Framework Decision",
+      "title": "Bun WebSocket Server, AWS SDK, and Redis",
+      "summary": "Bun WebSocket Server is used for real-time bidirectional communication. AWS SDK is integrated for AWS service interaction. Redis is employed for caching and session management.",
+      "source": {
+        "file": "tech.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "AWS Services Decision",
+      "title": "Amazon Bedrock, DynamoDB, Cognito, S3, CloudFront, and MemoryDB",
+      "summary": "Amazon Bedrock is integrated for AI model support. DynamoDB is chosen for game state and inventory persistence. Amazon Cognito is used for user authentication and authorization. S3 and CloudFront are selected for asset storage and content delivery. MemoryDB is utilized as a vector database for image matching.",
+      "source": {
+        "file": "tech.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Development Commands Decision",
+      "title": "Root, Client, Server, and Infrastructure Setup Commands",
+      "summary": "Various development commands are outlined for different levels and purposes, including root-level commands for starting both client and server in development mode, client commands for development server start, production build, preview, unit tests, linting, and code formatting, server commands for starting the server with hot reload, running tests with JUnit output, and setting up local DynamoDB tables, and infrastructure setup commands for deploying Cognito resources, starting the containerized stack, and bootstrapping local DynamoDB.",
+      "source": {
+        "file": "tech.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Code Quality Decision",
+      "title": "ESLint, Prettier, TypeScript, and Vitest",
+      "summary": "ESLint is used for linting with Vue and TypeScript configurations. Prettier is employed for code formatting. TypeScript is enabled for strict type checking. Vitest is chosen for unit testing with coverage reporting.",
+      "source": {
+        "file": "tech.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Runtime & Build System Decision",
+      "title": "Bun, Docker/Podman, and TypeScript",
+      "summary": "Bun is chosen as the primary JavaScript runtime for both client and server development. Docker/Podman is used for containerized development with compose orchestration. TypeScript is implemented for type safety throughout the codebase.",
+      "source": {
+        "file": "tech.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Frontend Framework Decision",
+      "title": "Vue.js 3, Pinia, and Vite",
+      "summary": "Vue.js 3 is selected as the component-based UI framework, utilizing the Composition API. Pinia is chosen for state management of reactive game state. Vite is used as the build tool and development server.",
+      "source": {
+        "file": "tech.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Backend Framework Decision",
+      "title": "Bun WebSocket Server, AWS SDK, and Redis",
+      "summary": "Bun WebSocket Server is used for real-time bidirectional communication. AWS SDK is integrated for AWS service interaction. Redis is employed for caching and session management.",
+      "source": {
+        "file": "tech.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "AWS Services Decision",
+      "title": "Amazon Bedrock, DynamoDB, Cognito, S3, CloudFront, and MemoryDB",
+      "summary": "Amazon Bedrock is integrated for AI model support. DynamoDB is chosen for game state and inventory persistence. Amazon Cognito is used for user authentication and authorization. S3 and CloudFront are selected for asset storage and content delivery. MemoryDB is utilized as a vector database for image matching.",
+      "source": {
+        "file": "tech.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Development Commands Decision",
+      "title": "Root, Client, Server, and Infrastructure Setup Commands",
+      "summary": "Various development commands are outlined for different levels and purposes, including root-level commands for starting both client and server in development mode, client commands for development server start, production build, preview, unit tests, linting, and code formatting, server commands for starting the server with hot reload, running tests with JUnit output, and setting up local DynamoDB tables, and infrastructure setup commands for deploying Cognito resources, starting the containerized stack, and bootstrapping local DynamoDB.",
+      "source": {
+        "file": "tech.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Code Quality Decision",
+      "title": "ESLint, Prettier, TypeScript, and Vitest",
+      "summary": "ESLint is used for linting with Vue and TypeScript configurations. Prettier is employed for code formatting. TypeScript is enabled for strict type checking. Vitest is chosen for unit testing with coverage reporting.",
+      "source": {
+        "file": "tech.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    }
+  ],
+  "rules": [
+    {
+      "id": "Gameplay Loop",
+      "rule": "Core Game Loop: Pull items, craft, store or sell, and repeat with improved items.",
+      "scope": null,
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "product.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "AI Integration",
+      "rule": "Leverage AWS Bedrock models (Nova Pro, Claude Sonnet 3.7/4) for item generation, crafting logic, appraisal, and image generation.",
+      "scope": null,
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "product.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Gameplay Loop",
+      "rule": "Core Game Loop: Pull items, craft, store or sell, and repeat with improved items.",
+      "scope": null,
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "product.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "AI Integration",
+      "rule": "Leverage AWS Bedrock models (Nova Pro, Claude Sonnet 3.7/4) for item generation, crafting logic, appraisal, and image generation.",
+      "scope": null,
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "product.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Socket-System",
+      "rule": "Manages WebSocket communication",
+      "scope": "Socket System",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Physics-System",
+      "rule": "Handles collision detection and movement",
+      "scope": "Physics System",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Game-Object-System",
+      "rule": "Tracks on-screen objects",
+      "scope": "Game Object System",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Item-Inventory-Systems",
+      "rule": "Manage game items and storage",
+      "scope": "Item/Inventory Systems",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "WebSocket-Message-Naming",
+      "rule": "WebSocket messages follow kebab-case naming pattern",
+      "scope": "Message-Driven Communication",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Server-Handler-Organization",
+      "rule": "Server handlers are organized by message type",
+      "scope": "Message-Driven Communication",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Event-Driven-Frontend-Updates",
+      "rule": "Event-driven frontend updates maintain reactive state",
+      "scope": "Message-Driven Communication",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "IAC-Directory-Structure",
+      "rule": "Each service has its own `iac/` directory for Infrastructure as Code",
+      "scope": "Infrastructure as Code",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Server-Tests-Location",
+      "rule": "Server tests are placed in `__tests__/` directories alongside source code",
+      "scope": "Testing Structure",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Client-Tests-Framework",
+      "rule": "Client tests use Vitest with Vue Test Utils",
+      "scope": "Testing Structure",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "File-Naming-Conventions-Kebab-Case",
+      "rule": "File names, component names, and message types follow kebab-case",
+      "scope": "File Naming Conventions",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Variable-Function-Naming-CamelCase",
+      "rule": "JavaScript/TypeScript variables and functions use camelCase",
+      "scope": "File Naming Conventions",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Vue-Component-TypeScript-Interface-Naming-PascalCase",
+      "rule": "Vue components and TypeScript interfaces use PascalCase",
+      "scope": "File Naming Conventions",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Socket-System",
+      "rule": "Manages WebSocket communication",
+      "scope": "Socket System",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Physics-System",
+      "rule": "Handles collision detection and movement",
+      "scope": "Physics System",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Game-Object-System",
+      "rule": "Tracks on-screen objects",
+      "scope": "Game Object System",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Item-Inventory-Systems",
+      "rule": "Manage game items and storage",
+      "scope": "Item/Inventory Systems",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "WebSocket-Message-Naming",
+      "rule": "WebSocket messages follow kebab-case naming pattern",
+      "scope": "Message-Driven Communication",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Server-Handler-Organization",
+      "rule": "Server handlers are organized by message type",
+      "scope": "Message-Driven Communication",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Event-Driven-Frontend-Updates",
+      "rule": "Event-driven frontend updates maintain reactive state",
+      "scope": "Message-Driven Communication",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "IAC-Directory-Structure",
+      "rule": "Each service has its own `iac/` directory for Infrastructure as Code",
+      "scope": "Infrastructure as Code",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Server-Tests-Location",
+      "rule": "Server tests are placed in `__tests__/` directories alongside source code",
+      "scope": "Testing Structure",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Client-Tests-Framework",
+      "rule": "Client tests use Vitest with Vue Test Utils",
+      "scope": "Testing Structure",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "File-Naming-Conventions-Kebab-Case",
+      "rule": "File names, component names, and message types follow kebab-case",
+      "scope": "File Naming Conventions",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Variable-Function-Naming-CamelCase",
+      "rule": "JavaScript/TypeScript variables and functions use camelCase",
+      "scope": "File Naming Conventions",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Vue-Component-TypeScript-Interface-Naming-PascalCase",
+      "rule": "Vue components and TypeScript interfaces use PascalCase",
+      "scope": "File Naming Conventions",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Socket-System",
+      "rule": "Manages WebSocket communication",
+      "scope": "Socket System",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Physics-System",
+      "rule": "Handles collision detection and movement",
+      "scope": "Physics System",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Game-Object-System",
+      "rule": "Tracks on-screen objects",
+      "scope": "Game Object System",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Item-Inventory-Systems",
+      "rule": "Manage game items and storage",
+      "scope": "Item/Inventory Systems",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "WebSocket-Message-Naming",
+      "rule": "WebSocket messages follow kebab-case naming pattern",
+      "scope": "Message-Driven Communication",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Server-Handler-Organization",
+      "rule": "Server handlers are organized by message type",
+      "scope": "Message-Driven Communication",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Event-Driven-Frontend-Updates",
+      "rule": "Event-driven frontend updates maintain reactive state",
+      "scope": "Message-Driven Communication",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "IAC-Directory-Structure",
+      "rule": "Each service has its own `iac/` directory for Infrastructure as Code",
+      "scope": "Infrastructure as Code",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Server-Tests-Location",
+      "rule": "Server tests are placed in `__tests__/` directories alongside source code",
+      "scope": "Testing Structure",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Client-Tests-Framework",
+      "rule": "Client tests use Vitest with Vue Test Utils",
+      "scope": "Testing Structure",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "File-Naming-Conventions-Kebab-Case",
+      "rule": "File names, component names, and message types follow kebab-case",
+      "scope": "File Naming Conventions",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Variable-Function-Naming-CamelCase",
+      "rule": "JavaScript/TypeScript variables and functions use camelCase",
+      "scope": "File Naming Conventions",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Vue-Component-TypeScript-Interface-Naming-PascalCase",
+      "rule": "Vue components and TypeScript interfaces use PascalCase",
+      "scope": "File Naming Conventions",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Socket-System",
+      "rule": "Manages WebSocket communication",
+      "scope": "Socket System",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Physics-System",
+      "rule": "Handles collision detection and movement",
+      "scope": "Physics System",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Game-Object-System",
+      "rule": "Tracks on-screen objects",
+      "scope": "Game Object System",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Item-Inventory-Systems",
+      "rule": "Manage game items and storage",
+      "scope": "Item/Inventory Systems",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "WebSocket-Message-Naming",
+      "rule": "WebSocket messages follow kebab-case naming pattern",
+      "scope": "Message-Driven Communication",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Server-Handler-Organization",
+      "rule": "Server handlers are organized by message type",
+      "scope": "Message-Driven Communication",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Event-Driven-Frontend-Updates",
+      "rule": "Event-driven frontend updates maintain reactive state",
+      "scope": "Message-Driven Communication",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "IAC-Directory-Structure",
+      "rule": "Each service has its own `iac/` directory for Infrastructure as Code",
+      "scope": "Infrastructure as Code",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Server-Tests-Location",
+      "rule": "Server tests are placed in `__tests__/` directories alongside source code",
+      "scope": "Testing Structure",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Client-Tests-Framework",
+      "rule": "Client tests use Vitest with Vue Test Utils",
+      "scope": "Testing Structure",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "File-Naming-Conventions-Kebab-Case",
+      "rule": "File names, component names, and message types follow kebab-case",
+      "scope": "File Naming Conventions",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Variable-Function-Naming-CamelCase",
+      "rule": "JavaScript/TypeScript variables and functions use camelCase",
+      "scope": "File Naming Conventions",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Vue-Component-TypeScript-Interface-Naming-PascalCase",
+      "rule": "Vue components and TypeScript interfaces use PascalCase",
+      "scope": "File Naming Conventions",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Socket-System",
+      "rule": "Manages WebSocket communication",
+      "scope": "Socket System",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Physics-System",
+      "rule": "Handles collision detection and movement",
+      "scope": "Physics System",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Game-Object-System",
+      "rule": "Tracks on-screen objects",
+      "scope": "Game Object System",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Item-Inventory-Systems",
+      "rule": "Manage game items and storage",
+      "scope": "Item/Inventory Systems",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "WebSocket-Message-Naming",
+      "rule": "WebSocket messages follow kebab-case naming pattern",
+      "scope": "Message-Driven Communication",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Server-Handler-Organization",
+      "rule": "Server handlers are organized by message type",
+      "scope": "Message-Driven Communication",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Event-Driven-Frontend-Updates",
+      "rule": "Event-driven frontend updates maintain reactive state",
+      "scope": "Message-Driven Communication",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "IAC-Directory-Structure",
+      "rule": "Each service has its own `iac/` directory for Infrastructure as Code",
+      "scope": "Infrastructure as Code",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Server-Tests-Location",
+      "rule": "Server tests are placed in `__tests__/` directories alongside source code",
+      "scope": "Testing Structure",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Client-Tests-Framework",
+      "rule": "Client tests use Vitest with Vue Test Utils",
+      "scope": "Testing Structure",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "File-Naming-Conventions-Kebab-Case",
+      "rule": "File names, component names, and message types follow kebab-case",
+      "scope": "File Naming Conventions",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Variable-Function-Naming-CamelCase",
+      "rule": "JavaScript/TypeScript variables and functions use camelCase",
+      "scope": "File Naming Conventions",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Vue-Component-TypeScript-Interface-Naming-PascalCase",
+      "rule": "Vue components and TypeScript interfaces use PascalCase",
+      "scope": "File Naming Conventions",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Socket-System",
+      "rule": "Manages WebSocket communication",
+      "scope": "Socket System",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Physics-System",
+      "rule": "Handles collision detection and movement",
+      "scope": "Physics System",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Game-Object-System",
+      "rule": "Tracks on-screen objects",
+      "scope": "Game Object System",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Item-Inventory-Systems",
+      "rule": "Manage game items and storage",
+      "scope": "Item/Inventory Systems",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "WebSocket-Message-Naming",
+      "rule": "WebSocket messages follow kebab-case naming pattern",
+      "scope": "Message-Driven Communication",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Server-Handler-Organization",
+      "rule": "Server handlers are organized by message type",
+      "scope": "Message-Driven Communication",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Event-Driven-Frontend-Updates",
+      "rule": "Event-driven frontend updates maintain reactive state",
+      "scope": "Message-Driven Communication",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "IAC-Directory-Structure",
+      "rule": "Each service has its own `iac/` directory for Infrastructure as Code",
+      "scope": "Infrastructure as Code",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Server-Tests-Location",
+      "rule": "Server tests are placed in `__tests__/` directories alongside source code",
+      "scope": "Testing Structure",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Client-Tests-Framework",
+      "rule": "Client tests use Vitest with Vue Test Utils",
+      "scope": "Testing Structure",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "File-Naming-Conventions-Kebab-Case",
+      "rule": "File names, component names, and message types follow kebab-case",
+      "scope": "File Naming Conventions",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Variable-Function-Naming-CamelCase",
+      "rule": "JavaScript/TypeScript variables and functions use camelCase",
+      "scope": "File Naming Conventions",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Vue-Component-TypeScript-Interface-Naming-PascalCase",
+      "rule": "Vue components and TypeScript interfaces use PascalCase",
+      "scope": "File Naming Conventions",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Socket-System",
+      "rule": "Manages WebSocket communication",
+      "scope": "Socket System",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Physics-System",
+      "rule": "Handles collision detection and movement",
+      "scope": "Physics System",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Game-Object-System",
+      "rule": "Tracks on-screen objects",
+      "scope": "Game Object System",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Item-Inventory-Systems",
+      "rule": "Manage game items and storage",
+      "scope": "Item/Inventory Systems",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "WebSocket-Message-Naming",
+      "rule": "WebSocket messages follow kebab-case naming pattern",
+      "scope": "Message-Driven Communication",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Server-Handler-Organization",
+      "rule": "Server handlers are organized by message type",
+      "scope": "Message-Driven Communication",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Event-Driven-Frontend-Updates",
+      "rule": "Event-driven frontend updates maintain reactive state",
+      "scope": "Message-Driven Communication",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "IAC-Directory-Structure",
+      "rule": "Each service has its own `iac/` directory for Infrastructure as Code",
+      "scope": "Infrastructure as Code",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Server-Tests-Location",
+      "rule": "Server tests are placed in `__tests__/` directories alongside source code",
+      "scope": "Testing Structure",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Client-Tests-Framework",
+      "rule": "Client tests use Vitest with Vue Test Utils",
+      "scope": "Testing Structure",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "File-Naming-Conventions-Kebab-Case",
+      "rule": "File names, component names, and message types follow kebab-case",
+      "scope": "File Naming Conventions",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Variable-Function-Naming-CamelCase",
+      "rule": "JavaScript/TypeScript variables and functions use camelCase",
+      "scope": "File Naming Conventions",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Vue-Component-TypeScript-Interface-Naming-PascalCase",
+      "rule": "Vue components and TypeScript interfaces use PascalCase",
+      "scope": "File Naming Conventions",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Socket-System",
+      "rule": "Manages WebSocket communication",
+      "scope": "Socket System",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Physics-System",
+      "rule": "Handles collision detection and movement",
+      "scope": "Physics System",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Game-Object-System",
+      "rule": "Tracks on-screen objects",
+      "scope": "Game Object System",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Item-Inventory-Systems",
+      "rule": "Manage game items and storage",
+      "scope": "Item/Inventory Systems",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "WebSocket-Message-Naming",
+      "rule": "WebSocket messages follow kebab-case naming pattern",
+      "scope": "Message-Driven Communication",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Server-Handler-Organization",
+      "rule": "Server handlers are organized by message type",
+      "scope": "Message-Driven Communication",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Event-Driven-Frontend-Updates",
+      "rule": "Event-driven frontend updates maintain reactive state",
+      "scope": "Message-Driven Communication",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "IAC-Directory-Structure",
+      "rule": "Each service has its own `iac/` directory for Infrastructure as Code",
+      "scope": "Infrastructure as Code",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Server-Tests-Location",
+      "rule": "Server tests are placed in `__tests__/` directories alongside source code",
+      "scope": "Testing Structure",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Client-Tests-Framework",
+      "rule": "Client tests use Vitest with Vue Test Utils",
+      "scope": "Testing Structure",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "File-Naming-Conventions-Kebab-Case",
+      "rule": "File names, component names, and message types follow kebab-case",
+      "scope": "File Naming Conventions",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Variable-Function-Naming-CamelCase",
+      "rule": "JavaScript/TypeScript variables and functions use camelCase",
+      "scope": "File Naming Conventions",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Vue-Component-TypeScript-Interface-Naming-PascalCase",
+      "rule": "Vue components and TypeScript interfaces use PascalCase",
+      "scope": "File Naming Conventions",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Socket-System",
+      "rule": "Manages WebSocket communication",
+      "scope": "Socket System",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Physics-System",
+      "rule": "Handles collision detection and movement",
+      "scope": "Physics System",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Game-Object-System",
+      "rule": "Tracks on-screen objects",
+      "scope": "Game Object System",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Item-Inventory-Systems",
+      "rule": "Manage game items and storage",
+      "scope": "Item/Inventory Systems",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "WebSocket-Message-Naming",
+      "rule": "WebSocket messages follow kebab-case naming pattern",
+      "scope": "Message-Driven Communication",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Server-Handler-Organization",
+      "rule": "Server handlers are organized by message type",
+      "scope": "Message-Driven Communication",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Event-Driven-Frontend-Updates",
+      "rule": "Event-driven frontend updates maintain reactive state",
+      "scope": "Message-Driven Communication",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "IAC-Directory-Structure",
+      "rule": "Each service has its own `iac/` directory for Infrastructure as Code",
+      "scope": "Infrastructure as Code",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Server-Tests-Location",
+      "rule": "Server tests are placed in `__tests__/` directories alongside source code",
+      "scope": "Testing Structure",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Client-Tests-Framework",
+      "rule": "Client tests use Vitest with Vue Test Utils",
+      "scope": "Testing Structure",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "File-Naming-Conventions-Kebab-Case",
+      "rule": "File names, component names, and message types follow kebab-case",
+      "scope": "File Naming Conventions",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Variable-Function-Naming-CamelCase",
+      "rule": "JavaScript/TypeScript variables and functions use camelCase",
+      "scope": "File Naming Conventions",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Vue-Component-TypeScript-Interface-Naming-PascalCase",
+      "rule": "Vue components and TypeScript interfaces use PascalCase",
+      "scope": "File Naming Conventions",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Socket-System",
+      "rule": "Manages WebSocket communication",
+      "scope": "Socket System",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Physics-System",
+      "rule": "Handles collision detection and movement",
+      "scope": "Physics System",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Game-Object-System",
+      "rule": "Tracks on-screen objects",
+      "scope": "Game Object System",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Item-Inventory-Systems",
+      "rule": "Manage game items and storage",
+      "scope": "Item/Inventory Systems",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "WebSocket-Message-Naming",
+      "rule": "WebSocket messages follow kebab-case naming pattern",
+      "scope": "Message-Driven Communication",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Server-Handler-Organization",
+      "rule": "Server handlers are organized by message type",
+      "scope": "Message-Driven Communication",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Event-Driven-Frontend-Updates",
+      "rule": "Event-driven frontend updates maintain reactive state",
+      "scope": "Message-Driven Communication",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "IAC-Directory-Structure",
+      "rule": "Each service has its own `iac/` directory for Infrastructure as Code",
+      "scope": "Infrastructure as Code",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Server-Tests-Location",
+      "rule": "Server tests are placed in `__tests__/` directories alongside source code",
+      "scope": "Testing Structure",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Client-Tests-Framework",
+      "rule": "Client tests use Vitest with Vue Test Utils",
+      "scope": "Testing Structure",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "File-Naming-Conventions-Kebab-Case",
+      "rule": "File names, component names, and message types follow kebab-case",
+      "scope": "File Naming Conventions",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Variable-Function-Naming-CamelCase",
+      "rule": "JavaScript/TypeScript variables and functions use camelCase",
+      "scope": "File Naming Conventions",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Vue-Component-TypeScript-Interface-Naming-PascalCase",
+      "rule": "Vue components and TypeScript interfaces use PascalCase",
+      "scope": "File Naming Conventions",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Socket-System",
+      "rule": "Manages WebSocket communication",
+      "scope": "Socket System",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Physics-System",
+      "rule": "Handles collision detection and movement",
+      "scope": "Physics System",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Game-Object-System",
+      "rule": "Tracks on-screen objects",
+      "scope": "Game Object System",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Item-Inventory-Systems",
+      "rule": "Manage game items and storage",
+      "scope": "Item/Inventory Systems",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "WebSocket-Message-Naming",
+      "rule": "WebSocket messages follow kebab-case naming pattern",
+      "scope": "Message-Driven Communication",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Server-Handler-Organization",
+      "rule": "Server handlers are organized by message type",
+      "scope": "Message-Driven Communication",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Event-Driven-Frontend-Updates",
+      "rule": "Event-driven frontend updates maintain reactive state",
+      "scope": "Message-Driven Communication",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "IAC-Directory-Structure",
+      "rule": "Each service has its own `iac/` directory for Infrastructure as Code",
+      "scope": "Infrastructure as Code",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Server-Tests-Location",
+      "rule": "Server tests are placed in `__tests__/` directories alongside source code",
+      "scope": "Testing Structure",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Client-Tests-Framework",
+      "rule": "Client tests use Vitest with Vue Test Utils",
+      "scope": "Testing Structure",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "File-Naming-Conventions-Kebab-Case",
+      "rule": "File names, component names, and message types follow kebab-case",
+      "scope": "File Naming Conventions",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Variable-Function-Naming-CamelCase",
+      "rule": "JavaScript/TypeScript variables and functions use camelCase",
+      "scope": "File Naming Conventions",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Vue-Component-TypeScript-Interface-Naming-PascalCase",
+      "rule": "Vue components and TypeScript interfaces use PascalCase",
+      "scope": "File Naming Conventions",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Socket-System",
+      "rule": "Manages WebSocket communication",
+      "scope": "Socket System",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Physics-System",
+      "rule": "Handles collision detection and movement",
+      "scope": "Physics System",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Game-Object-System",
+      "rule": "Tracks on-screen objects",
+      "scope": "Game Object System",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Item-Inventory-Systems",
+      "rule": "Manage game items and storage",
+      "scope": "Item/Inventory Systems",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "WebSocket-Message-Naming",
+      "rule": "WebSocket messages follow kebab-case naming pattern",
+      "scope": "Message-Driven Communication",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Server-Handler-Organization",
+      "rule": "Server handlers are organized by message type",
+      "scope": "Message-Driven Communication",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Event-Driven-Frontend-Updates",
+      "rule": "Event-driven frontend updates maintain reactive state",
+      "scope": "Message-Driven Communication",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "IAC-Directory-Structure",
+      "rule": "Each service has its own `iac/` directory for Infrastructure as Code",
+      "scope": "Infrastructure as Code",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Server-Tests-Location",
+      "rule": "Server tests are placed in `__tests__/` directories alongside source code",
+      "scope": "Testing Structure",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Client-Tests-Framework",
+      "rule": "Client tests use Vitest with Vue Test Utils",
+      "scope": "Testing Structure",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "File-Naming-Conventions-Kebab-Case",
+      "rule": "File names, component names, and message types follow kebab-case",
+      "scope": "File Naming Conventions",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Variable-Function-Naming-CamelCase",
+      "rule": "JavaScript/TypeScript variables and functions use camelCase",
+      "scope": "File Naming Conventions",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Vue-Component-TypeScript-Interface-Naming-PascalCase",
+      "rule": "Vue components and TypeScript interfaces use PascalCase",
+      "scope": "File Naming Conventions",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Socket-System",
+      "rule": "Manages WebSocket communication",
+      "scope": "Socket System",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Physics-System",
+      "rule": "Handles collision detection and movement",
+      "scope": "Physics System",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Game-Object-System",
+      "rule": "Tracks on-screen objects",
+      "scope": "Game Object System",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Item-Inventory-Systems",
+      "rule": "Manage game items and storage",
+      "scope": "Item/Inventory Systems",
+      "notes": null,
+      "category": "Frontend Systems Architecture",
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "WebSocket-Message-Naming",
+      "rule": "WebSocket messages follow kebab-case naming pattern",
+      "scope": "Message-Driven Communication",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Server-Handler-Organization",
+      "rule": "Server handlers are organized by message type",
+      "scope": "Message-Driven Communication",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Event-Driven-Frontend-Updates",
+      "rule": "Event-driven frontend updates maintain reactive state",
+      "scope": "Message-Driven Communication",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "IAC-Directory-Structure",
+      "rule": "Each service has its own `iac/` directory for Infrastructure as Code",
+      "scope": "Infrastructure as Code",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Server-Tests-Location",
+      "rule": "Server tests are placed in `__tests__/` directories alongside source code",
+      "scope": "Testing Structure",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Client-Tests-Framework",
+      "rule": "Client tests use Vitest with Vue Test Utils",
+      "scope": "Testing Structure",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "File-Naming-Conventions-Kebab-Case",
+      "rule": "File names, component names, and message types follow kebab-case",
+      "scope": "File Naming Conventions",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Variable-Function-Naming-CamelCase",
+      "rule": "JavaScript/TypeScript variables and functions use camelCase",
+      "scope": "File Naming Conventions",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    },
+    {
+      "id": "Vue-Component-TypeScript-Interface-Naming-PascalCase",
+      "rule": "Vue components and TypeScript interfaces use PascalCase",
+      "scope": "File Naming Conventions",
+      "notes": null,
+      "category": null,
+      "source": {
+        "file": "structure.md",
+        "line_start": null,
+        "line_end": null,
+        "anchor": null
+      },
+      "observed_at": null
+    }
+  ],
+  "warnings": [],
+  "validation_report": {
+    "rules_count": 173,
+    "decisions_count": 62,
+    "warnings_count": 0,
+    "missing_source": 0,
+    "status": "ok"
+  }
+}
